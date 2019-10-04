@@ -91,29 +91,9 @@ function Calculate(event)
 		else
 		{
 			
-			switch(operator)
-			{
-				case '+':
-				inputBar.value=parseFloat(operand1)+parseFloat(operand2);
-				
-				break;
-				
-				case '-':
-				inputBar.value=parseFloat(operand1)-parseFloat(operand2);
-				break;
-				
-				case '/':
-				inputBar.value=parseFloat(operand1)/parseFloat(operand2);
-				break;
-				
-				case '*':
-				inputBar.value=parseFloat(operand1)*parseFloat(operand2);
-				break;
-				
-				// case '=':
-				// inputBar.value=parseInt(operand1)*parseInt(operand2);
-				// break;
-			}
+			
+			inputBar.value=eval(parseInt(operand1)+operator+parseInt(operand2));
+			
 			operator=event.target.innerHTML;
 			if(operator=='=')
 			{
